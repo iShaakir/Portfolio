@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #0b2c4d;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8a8a8a;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section {
+    opacity: 0;  
+    transform: translateY(30px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+    opacity: 1;  
+    transform: translateY(0);  
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    padding: 2rem;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    max-width: 1000px;
+}
+
+.profile-pic {
+    width: 375px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: inherit;
+    pointer-events: none;
+    user-select: none;
+}
+
+.home-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#overmij {
+    background-color: #fdfbfb;
+    color: #333;
+}
+
+.overmij-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overmij-text {
+    flex: 1;
+}
+
+.overmij-img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+
+#projecten {
+    background-color: #fdfbfb;
+    color: #333;
+}
+
+#contact {
+    background-color: #f4f7fc;
+    padding: 1rem 2rem;
+}
+
+.projecten-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.card h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #001f33;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #333;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #003366;
+}
+
+#vaardigheden {
+    background-color: #f4f7fc;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.vaardigheden-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.vaardigheden-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.vaardigheden-icon i {
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+.vaardigheden-icon p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#vaardigheden h2 {
+    margin-bottom: 1.5rem; 
+}
+
+#overmij h2, #skills h2 {
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#overmij p, #skills .skill-icons {
+    margin-top: 1rem;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
